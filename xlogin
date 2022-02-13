@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-sshpass -p "gg123@#$" ssh root@47.254.203.227
