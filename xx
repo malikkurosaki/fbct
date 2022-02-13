@@ -22,26 +22,26 @@ menu() {
 run() {
     case $1 in
     -s) cd xserver && nodemon server.js ;;
-    -c) echo "client" ;;
+    -c) flutter run -d chrome ;;
     *) echo "perintah run hanya -c dan -s" ;;
     esac
 }
 
-push(){
+push() {
     echo $w2
     echo "coba build"
     flutter build web --release
     git add .
     git commit -m "baru"
-    git push origin main 
+    git push origin main
     echo $w3
-
 }
 
 perintah() {
     case $1 in
     push) push ;;
     run) run $2 ;;
+    spl) flutter pub run flutter_native_splash:create ;;
     *) menu ;;
     esac
 }
