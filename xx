@@ -1,1 +1,49 @@
 #!/usr/bin/env bash
+
+w1=$(tput setaf 2)
+w2=$(tput setaf 3)
+w3=$(tput setaf 7)
+
+menu() {
+    local m="
+    ---------------------------------
+    Fbct                         MENU
+    ---------------------------------
+
+
+    ---------------------------------
+    Malik Kurosaki              v0001
+    ---------------------------------
+    "
+
+    echo $w2"$m"$w3
+}
+
+run() {
+    case $1 in
+    -s) cd xserver && nodemon server.js ;;
+    -c) echo "client" ;;
+    *) echo "perintah run hanya -c dan -s" ;;
+    esac
+}
+
+push(){
+    echo $w2
+    echo "coba build"
+    flutter build web --release
+    git add .
+    git commit -m "baru"
+    git push origin main 
+    echo $w3
+
+}
+
+perintah() {
+    case $1 in
+    push) push ;;
+    run) run $2 ;;
+    *) menu ;;
+    esac
+}
+
+[[ ! -z $1 ]] && perintah $1 $2 || menu
