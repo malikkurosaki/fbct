@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 
-echo "coba build"
-flutter build web --release
-git add .
-git commit -m "baru"
-git push origin main
-sshpass -p "gg123@#$" ssh root@47.254.203.227 -t "cd ../home/fbct && git pull && pm2 restart fbct"
+# echo "coba build"
+# flutter build web --release
+# git add .
+# git commit -m "baru"
+# git push origin main
+sshpass -p "gg123@#$" ssh root@47.254.203.227
+
