@@ -3,7 +3,6 @@ const app = express();
 const cors = require('cors');
 
 app.use(cors());
-app.use(express.static('../build/web/assets/assets'));
 app.use(express.static('../build/web'));
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
