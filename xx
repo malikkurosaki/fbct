@@ -42,6 +42,7 @@ perintah() {
     push) push ;;
     run) run $2 ;;
     spl) flutter pub run flutter_native_splash:create ;;
+    start) cd xserver && pm2 start server.js --watch --name fbct ;;
     *) menu ;;
     esac
 }
