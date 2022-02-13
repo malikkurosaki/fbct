@@ -31,6 +31,7 @@ push() {
     echo $w2
     echo "coba build"
     flutter build web --release
+    rm -r build/web/assets/images
     cp -r build/web/assets/assets/images build/web/assets/images
     git add .
     git commit -m "baru"
