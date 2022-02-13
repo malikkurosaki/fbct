@@ -22,7 +22,7 @@ class Home extends StatelessWidget {
                     children: [
                       Center(
                         child: Image.asset(
-                          'splash.png',
+                          'images/splash.png',
                           width: 70,
                         ),
                       ),
@@ -52,7 +52,7 @@ class Home extends StatelessWidget {
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Image.asset(
-                              'bg_2.png',
+                              'images/bg_2.png',
                               width: 300,
                             ),
                           ),
@@ -87,7 +87,7 @@ class Home extends StatelessWidget {
                     ],
                   ),
                   Image.asset(
-                    'fbct_2.png',
+                    'images/fbct_2.png',
                   ),
                   Card(
                     child: Padding(
